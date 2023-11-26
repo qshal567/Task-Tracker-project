@@ -1,0 +1,11 @@
+<!-- task_tracker_app/templates/task_tracker_app/task_form.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Create or Update Task</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+  </form>
+{% endblock %}

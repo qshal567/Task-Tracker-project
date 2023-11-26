@@ -1,0 +1,11 @@
+<!-- task_tracker_app/templates/task_tracker_app/task_list.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Task List</h2>
+  <ul>
+    {% for task in object_list %}
+      <li>{{ task.title }} - {{ task.description }} - {{ task.due_date }} - {{ task.status }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
